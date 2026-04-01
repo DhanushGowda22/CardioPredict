@@ -12,6 +12,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Load trained ML model
 model = joblib.load(os.path.join(BASE_DIR, "model", "model.pkl"))
+# Load scaler for feature normalization
 scaler = joblib.load(os.path.join(BASE_DIR, "model", "scaler.pkl"))
 
 # ✅ Templates (for HTML UI)
