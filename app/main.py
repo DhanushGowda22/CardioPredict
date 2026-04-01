@@ -15,7 +15,7 @@ model = joblib.load(os.path.join(BASE_DIR, "model", "model.pkl"))
 # Load scaler for feature normalization
 scaler = joblib.load(os.path.join(BASE_DIR, "model", "scaler.pkl"))
 
-# ✅ Templates (for HTML UI)
+# Setup Jinja2 templates for frontend UI
 templates = Jinja2Templates(directory="app/templates")
 
 # ✅ Home route (opens UI)
