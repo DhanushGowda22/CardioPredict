@@ -31,6 +31,7 @@ def home(request: Request):
 def predict(data: List[float]):
 
     # Convert input list to numpy array
+    # Reshape input for model (1 row, multiple features)
     input_data = np.array(data).reshape(1, -1)
 
     # Scale input
