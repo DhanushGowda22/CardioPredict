@@ -30,7 +30,7 @@ def home(request: Request):
 @app.post("/predict")
 def predict(data: List[float]):
 
-    # Convert input to numpy array
+    # Convert input list to numpy array
     input_data = np.array(data).reshape(1, -1)
 
     # Scale input
