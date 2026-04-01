@@ -26,6 +26,7 @@ def home(request: Request):
         {"request": request}
     )
 # ✅ Prediction API (used by JavaScript)
+# API endpoint for heart disease prediction
 @app.post("/predict")
 def predict(data: List[float]):
 
