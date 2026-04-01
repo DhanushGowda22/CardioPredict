@@ -10,7 +10,7 @@ app = FastAPI()
 # ✅ Base directory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# ✅ Load model and scaler
+# Load trained ML model
 model = joblib.load(os.path.join(BASE_DIR, "model", "model.pkl"))
 scaler = joblib.load(os.path.join(BASE_DIR, "model", "scaler.pkl"))
 
