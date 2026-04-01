@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CardioPredict</title>
+</head>
+<body>
+
+<h2>Heart Disease Prediction</h2>
+
+Age: <input type="number" id="age"><br><br>
+Sex: <input type="number" id="sex"><br><br>
+CP: <input type="number" id="cp"><br><br>
+Trestbps: <input type="number" id="trestbps"><br><br>
+Chol: <input type="number" id="chol"><br><br>
+FBS: <input type="number" id="fbs"><br><br>
+RestECG: <input type="number" id="restecg"><br><br>
+Thalach: <input type="number" id="thalach"><br><br>
+Exang: <input type="number" id="exang"><br><br>
+Oldpeak: <input type="number" step="0.1" id="oldpeak"><br><br>
+Slope: <input type="number" id="slope"><br><br>
+CA: <input type="number" id="ca"><br><br>
+Thal: <input type="number" id="thal"><br><br>
+
+<button onclick="predict()">Predict</button>
+
+<h2 id="result"></h2>
+
+<script>
+async function predict() {
+    const data = [
+        Number(age.value),
+        Number(sex.value),
+        Number(cp.value),
+        Number(trestbps.value),
+        Number(chol.value),
+        Number(fbs.value),
+        Number(restecg.value),
+        Number(thalach.value),
+        Number(exang.value),
+        Number(oldpeak.value),
+        Number(slope.value),
+        Number(ca.value),
+        Number(thal.value)
+    ];
+
+    const res = await fetch("/predict", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+
+    document.getElementById("result").innerText =
+        result.prediction === 1
+        ? "Heart Disease Detected ❤️"
+        : "No Heart Disease 💚";
+}
+</script>
+
+</body>
+</html>
