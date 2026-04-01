@@ -7,7 +7,7 @@ import os
 
 app = FastAPI()
 
-# ✅ Base directory
+# Base directory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Load trained ML model
