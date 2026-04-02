@@ -81,26 +81,29 @@ Top contributing features include:
 ---
 
 ## 📂 Project Structure
+
+```
 CardioPredict/
 │
 ├── app/
-│ ├── main.py # FastAPI backend
-│ ├── templates/
-│ │ └── index.html # UI
-│ └── model/
-│ ├── model.pkl # Trained ML model
-│ └── scaler.pkl # Feature scaler
+│   ├── main.py
+│   ├── templates/
+│   │   └── index.html
+│   └── model/
+│       ├── model.pkl
+│       └── scaler.pkl
 │
 ├── data/
-│ └── heart.csv # Dataset
+│   └── heart.csv
 │
 ├── notebook/
-│ └── heart_disease_analysis.ipynb # ML training & analysis
+│   └── heart_disease_analysis.ipynb
 │
 ├── requirements.txt
 ├── render.yaml
 ├── README.md
 └── .gitignore
+```
 
 ---
 
