@@ -22,8 +22,9 @@ templates = Jinja2Templates(directory="app/templates")
 @app.get("/")
 def home(request: Request):
     return templates.TemplateResponse(
-        "index.html",
-        {"request": request}
+        request=request,
+        name="index.html",
+        context={}
     )
 # ✅ Prediction API (used by JavaScript)
 # API endpoint for heart disease prediction
