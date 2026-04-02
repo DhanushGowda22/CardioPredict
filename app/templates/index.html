@@ -94,10 +94,17 @@
 <body>
 
 <div class="container">
-    <h1>CardioPredict ❤️</h1>
-<p style="text-align:center; color:#aaa; font-size:14px;">
+    <h1 style="text-align:center; margin-bottom:5px;">
+    CardioPredict ❤️
+</h1>
+
+<p style="text-align:center; font-size:14px; color:#888; margin-top:0;">
+    by Dhanush
+
+<p style="text-align: center; margin-bottom: 20px;">
     AI-powered Heart Disease Risk Assessment
 </p>
+
 
     Age:
     <input type="number" id="age">
@@ -215,8 +222,8 @@ async function predict() {
 
         document.getElementById("result").innerText =
             result.prediction === 1
-            ? "⚠️ High Risk of Heart Disease ❤️"
-            : "✅ Low Risk of Heart Disease 💚";
+            ? " High Risk of Heart Disease ⚠️"
+            : " Low Risk of Heart Disease 💚";
 
     } catch (error) {
         const resultBox = document.getElementById("result");
