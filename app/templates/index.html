@@ -31,7 +31,22 @@
         text-align: center;
         color: #ffffff;
     }
+    /* 🔥 Spinner */
+.spinner {
+    border: 4px solid #2c2c2c;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
 
+/* 🔥 Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
     label {
         font-size: 14px;
     }
@@ -133,36 +148,59 @@
 
 <script>
 async function predict() {
-    const data = [
-        Number(document.getElementById("age").value),
-        Number(document.getElementById("sex").value),
-        Number(document.getElementById("cp").value),
-        Number(document.getElementById("trestbps").value),
-        Number(document.getElementById("chol").value),
-        Number(document.getElementById("fbs").value),
-        Number(document.getElementById("restecg").value),
-        Number(document.getElementById("thalach").value),
-        Number(document.getElementById("exang").value),
-        Number(document.getElementById("oldpeak").value),
-        Number(document.getElementById("slope").value),
-        Number(document.getElementById("ca").value),
-        Number(document.getElementById("thal").value)
+
+    const inputs = [
+        "age","sex","cp","trestbps","chol","fbs",
+        "restecg","thalach","exang","oldpeak",
+        "slope","ca","thal"
     ];
 
-    const response = await fetch("/predict", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    });
+    // 🚫 Validation
+    for (let id of inputs) {
+        if (document.getElementById(id).value === "") {
+            alert("Please fill all fields!");
+            return;
+        }
+    }
 
-    const result = await response.json();
+    // ⏳ Show loader
+    document.getElementById("loader").style.display = "block";
 
-    document.getElementById("result").innerText =
-        result.prediction === 1
-        ? "⚠️ High Risk of Heart Disease ❤️"
-        : "✅ Low Risk of Heart Disease 💚";
+    // 🔒 Disable button
+    const btn = document.querySelector("button");
+    btn.disabled = true;
+    btn.innerText = "Predicting...";
+
+    const data = inputs.map(id =>
+        Number(document.getElementById(id).value)
+    );
+
+    try {
+        const response = await fetch("/predict", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        document.getElementById("result").innerText =
+            result.prediction === 1
+            ? "⚠️ High Risk of Heart Disease ❤️"
+            : "✅ Low Risk of Heart Disease 💚";
+
+    } catch (error) {
+        document.getElementById("result").innerText = "Error occurred!";
+    }
+
+    // ✅ Hide loader
+    document.getElementById("loader").style.display = "none";
+
+    // 🔓 Enable button
+    btn.disabled = false;
+    btn.innerText = "Predict";
 }
 </script>
 
