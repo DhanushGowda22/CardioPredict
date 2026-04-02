@@ -1,49 +1,151 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CardioPredict</title>
+    <title>CardioPredict ❤️</title>
+
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #121212;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* 🔥 changed */
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        overflow-y: auto; /* 🔥 allows scrolling */
+        color: #fff;
+    }
+
+    .container {
+        background: #1e1e1e;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 25px rgba(0,0,0,0.5);
+        width: 400px;
+        margin-top: 20px;
+        border: 1px solid #2a2a2a;
+    }
+
+    h1 {
+        text-align: center;
+        color: #ffffff;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        border-radius: 6px;
+        border: 1px solid #333;
+        background: #2c2c2c;
+        color: #fff;
+    }
+
+    input:focus, select:focus {
+        outline: none;
+        border: 1px solid #007bff;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background: #0056b3;
+    }
+
+    #result {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
 </head>
+
 <body>
 
-<h2>Heart Disease Prediction</h2>
+<div class="container">
+    <h1>CardioPredict ❤️</h1>
 
-Age: <input type="number" id="age"><br><br>
-Sex: <input type="number" id="sex"><br><br>
-CP: <input type="number" id="cp"><br><br>
-Trestbps: <input type="number" id="trestbps"><br><br>
-Chol: <input type="number" id="chol"><br><br>
-FBS: <input type="number" id="fbs"><br><br>
-RestECG: <input type="number" id="restecg"><br><br>
-Thalach: <input type="number" id="thalach"><br><br>
-Exang: <input type="number" id="exang"><br><br>
-Oldpeak: <input type="number" step="0.1" id="oldpeak"><br><br>
-Slope: <input type="number" id="slope"><br><br>
-CA: <input type="number" id="ca"><br><br>
-Thal: <input type="number" id="thal"><br><br>
+    Age:
+    <input type="number" id="age">
 
-<button onclick="predict()">Predict</button>
+    Sex:
+    <select id="sex">
+        <option value="1">Male</option>
+        <option value="0">Female</option>
+    </select>
 
-<h2 id="result"></h2>
+    Chest Pain Type:
+    <input type="number" id="cp">
+
+    Resting BP:
+    <input type="number" id="trestbps">
+
+    Cholesterol:
+    <input type="number" id="chol">
+
+    Fasting Blood Sugar:
+    <input type="number" id="fbs">
+
+    Rest ECG:
+    <input type="number" id="restecg">
+
+    Max Heart Rate:
+    <input type="number" id="thalach">
+
+    Exercise Induced Angina:
+    <input type="number" id="exang">
+
+    Oldpeak:
+    <input type="number" step="0.1" id="oldpeak">
+
+    Slope:
+    <input type="number" id="slope">
+
+    CA:
+    <input type="number" id="ca">
+
+    Thal:
+    <input type="number" id="thal">
+
+    <button onclick="predict()">Predict</button>
+
+    <div id="result"></div>
+</div>
 
 <script>
 async function predict() {
     const data = [
-        Number(age.value),
-        Number(sex.value),
-        Number(cp.value),
-        Number(trestbps.value),
-        Number(chol.value),
-        Number(fbs.value),
-        Number(restecg.value),
-        Number(thalach.value),
-        Number(exang.value),
-        Number(oldpeak.value),
-        Number(slope.value),
-        Number(ca.value),
-        Number(thal.value)
+        Number(document.getElementById("age").value),
+        Number(document.getElementById("sex").value),
+        Number(document.getElementById("cp").value),
+        Number(document.getElementById("trestbps").value),
+        Number(document.getElementById("chol").value),
+        Number(document.getElementById("fbs").value),
+        Number(document.getElementById("restecg").value),
+        Number(document.getElementById("thalach").value),
+        Number(document.getElementById("exang").value),
+        Number(document.getElementById("oldpeak").value),
+        Number(document.getElementById("slope").value),
+        Number(document.getElementById("ca").value),
+        Number(document.getElementById("thal").value)
     ];
 
-    const res = await fetch("/predict", {
+    const response = await fetch("/predict", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -51,12 +153,12 @@ async function predict() {
         body: JSON.stringify(data)
     });
 
-    const result = await res.json();
+    const result = await response.json();
 
     document.getElementById("result").innerText =
         result.prediction === 1
-        ? "Heart Disease Detected ❤️"
-        : "No Heart Disease 💚";
+        ? "⚠️ High Risk of Heart Disease ❤️"
+        : "✅ Low Risk of Heart Disease 💚";
 }
 </script>
 
