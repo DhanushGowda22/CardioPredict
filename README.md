@@ -85,8 +85,11 @@ CardioPredict/
 │
 ├── app/
 │ ├── main.py # FastAPI backend
-│ ├── templates/ # HTML UI
-│ └── model/ # Saved model & scaler
+│ ├── templates/
+│ │ └── index.html # UI
+│ └── model/
+│ ├── model.pkl # Trained ML model
+│ └── scaler.pkl # Feature scaler
 │
 ├── data/
 │ └── heart.csv # Dataset
@@ -96,7 +99,8 @@ CardioPredict/
 │
 ├── requirements.txt
 ├── render.yaml
-└── README.md
+├── README.md
+└── .gitignore
 
 ---
 
