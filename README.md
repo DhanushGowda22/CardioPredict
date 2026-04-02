@@ -4,12 +4,12 @@ An end-to-end Machine Learning web application that predicts the risk of heart d
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo
 🔗 https://cardiopredict-a18b.onrender.com
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 CardioPredict is an ML-powered web application that:
 
@@ -20,13 +20,13 @@ CardioPredict is an ML-powered web application that:
 
 ---
 
-## 🧠 Machine Learning Approach
+##  Machine Learning Approach
 
 ### Models Used:
 - Logistic Regression ✅ (Final Model)
 - Random Forest (Baseline)
 
-### 📊 Model Comparison:
+###  Model Comparison:
 
 | Model                | Accuracy |
 |---------------------|---------|
@@ -37,7 +37,7 @@ CardioPredict is an ML-powered web application that:
 
 ---
 
-## 📈 Model Evaluation
+##  Model Evaluation
 
 - Accuracy: ~88%
 - Balanced Precision & Recall
@@ -46,7 +46,7 @@ CardioPredict is an ML-powered web application that:
 
 ---
 
-## 🔍 Feature Importance (Random Forest)
+##  Feature Importance (Random Forest)
 
 Feature importance analysis was performed to understand key factors influencing predictions.
 
@@ -69,7 +69,7 @@ Top contributing features include:
 - Pandas
 - NumPy
 
-### 📊 Visualization:
+###  Visualization:
 - Matplotlib
 
 ###  Frontend:
@@ -117,21 +117,22 @@ CardioPredict/
 
 ---
 
-## Key Highlights
+##  Key Highlights
 
-✔ End-to-end ML pipeline
-✔ Model comparison & selection
-✔ Real-world deployment
-✔ Clean UI with prediction output
-✔ Feature importance analysis
+* ✔ End-to-end ML pipeline
+* ✔ Model comparison & selection
+* ✔ Real-world deployment
+* ✔ Clean UI with prediction output
+* ✔ Feature importance analysis
 
 ---
 
 ##  Future Improvements
-Add risk percentage score
-Explain predictions (model interpretability)
-Improve UI/UX
-Add more advanced models (XGBoost, etc.)
+
+* Add risk percentage score
+* Explain predictions (model interpretability)
+* Improve UI/UX
+* Add more advanced models (XGBoost, etc.)
 
 ---
 ## 👨‍💻 Author
