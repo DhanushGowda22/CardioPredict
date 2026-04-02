@@ -25,6 +25,7 @@
         width: 400px;
         margin-top: 20px;
         border: 1px solid #2a2a2a;
+        transition: 0.3s;
     }
 
     h1 {
@@ -94,6 +95,9 @@
 
 <div class="container">
     <h1>CardioPredict ❤️</h1>
+<p style="text-align:center; color:#aaa; font-size:14px;">
+    AI-powered Heart Disease Risk Assessment
+</p>
 
     Age:
     <input type="number" id="age">
@@ -154,7 +158,11 @@
     <input type="number" id="ca">
 
     Thal:
-    <input type="number" id="thal">
+    <select id="thal">
+    <option value="1">Normal</option>
+    <option value="2">Fixed Defect</option>
+    <option value="3">Reversible Defect</option>
+</select>
 
     <button onclick="predict()">Predict</button>
     <div id="loader" style="display:none; text-align:center; margin-top:15px;">
@@ -211,7 +219,13 @@ async function predict() {
             : "✅ Low Risk of Heart Disease 💚";
 
     } catch (error) {
-        document.getElementById("result").innerText = "Error occurred!";
+        const resultBox = document.getElementById("result");
+
+if (result.prediction === 1) {
+    resultBox.innerHTML = "⚠️ <span style='color:#ff4d4d'>High Risk of Heart Disease</span>";
+} else {
+    resultBox.innerHTML = "✅ <span style='color:#00cc66'>Low Risk of Heart Disease</span>";
+}
     }
 
     // ✅ Hide loader
