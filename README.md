@@ -137,7 +137,7 @@ CardioPredict/
 ---
 ## 👨‍💻 Author
 
-**Dhanush**
+**Dhanush Gowda**
 
 🔗 GitHub: https://github.com/DhanushGowda22
 
