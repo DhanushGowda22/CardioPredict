@@ -119,11 +119,11 @@ CardioPredict/
 
 ##  Key Highlights
 
-* ✔ End-to-end ML pipeline
-* ✔ Model comparison & selection
-* ✔ Real-world deployment
-* ✔ Clean UI with prediction output
-* ✔ Feature importance analysis
+*  End-to-end ML pipeline
+*  Model comparison & selection
+*  Real-world deployment
+*  Clean UI with prediction output
+*  Feature importance analysis
 
 ---
 
