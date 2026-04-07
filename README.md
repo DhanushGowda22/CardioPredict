@@ -30,7 +30,7 @@ CardioPredict is an ML-powered web application that:
 
 | Model                | Accuracy |
 |---------------------|---------|
-| Logistic Regression | **88.5%** ✅ |
+| Logistic Regression | **88.5%**  |
 | Random Forest       | 83.6% |
 
 ✔ Logistic Regression was selected as the final model due to better performance.
