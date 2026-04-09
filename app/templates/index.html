@@ -222,8 +222,8 @@ async function predict() {
 
         document.getElementById("result").innerText =
             result.prediction === 1
-            ? " High Risk of Heart Disease ⚠️"
-            : " Low Risk of Heart Disease 💚";
+            ? " High Risk of Heart Disease ⚠️, Seek immediate medical attention"
+            : " Low Risk of Heart Disease 💚, Stay healthy";
 
     } catch (error) {
         const resultBox = document.getElementById("result");
