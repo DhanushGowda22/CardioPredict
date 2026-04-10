@@ -23,11 +23,18 @@ CardioPredict is an ML-powered web application that:
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="assets/home.png" width="700">
+  <img src="assets/home.png" width="700"><br>
+  <b>Homepage UI</b>
+
   <br><br>
-  <img src="assets/result1.png" width="700">
+
+  <img src="assets/result1.png" width="700"><br>
+  <b>Low Risk Prediction</b>
+
   <br><br>
-  <img src="assets/result2.png" width="700">
+
+  <img src="assets/result2.png" width="700"><br>
+  <b>High Risk Prediction</b>
 </p>
 
 ##  Machine Learning Approach
