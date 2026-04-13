@@ -31,7 +31,6 @@ CardioPredict is an ML-powered web application that:
   </tr>
   <tr><td><br></td></tr>
 
-
   <tr>
     <td align="center">
       <img src="assets/result1.png" width="500"><br><br>
@@ -39,7 +38,6 @@ CardioPredict is an ML-powered web application that:
     </td>
   </tr>
   <tr><td><br></td></tr>
-
 
   <tr>
     <td align="center">
