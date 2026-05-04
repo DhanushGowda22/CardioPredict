@@ -20,7 +20,7 @@ CardioPredict is an ML-powered web application that:
 
 ---
 
-## 📸 Screenshots
+## 📸Screenshots
 
 <table align="center">
   <tr>
