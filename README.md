@@ -26,7 +26,7 @@ CardioPredict is an ML-powered web application that:
   <tr>
     <td align="center">
       <img src="assets/home.png" width="500"><br><br>
-      <b style="color:#00FFFF;">🏠Homepage UI</b>
+      <b style="color:#00FFFF;">Homepage UI</b>
     </td>
   </tr>
   <tr><td><br></td></tr>
