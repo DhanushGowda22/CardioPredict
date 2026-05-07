@@ -85,7 +85,7 @@ Top contributing features include:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ###  Backend:
 - FastAPI
