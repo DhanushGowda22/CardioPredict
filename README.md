@@ -107,7 +107,7 @@ Top contributing features include:
 
 ---
 
-## 📂Project Structure
+## Project Structure
 
 ```
 CardioPredict/
