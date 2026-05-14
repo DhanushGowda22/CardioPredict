@@ -162,7 +162,7 @@ CardioPredict/
 * Add more advanced models (XGBoost, etc.)
 
 ---
-## 👨‍💻Author
+## Author
 
 **Dhanush Gowda**
 
