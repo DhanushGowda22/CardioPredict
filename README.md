@@ -1,4 +1,4 @@
-# CardioPredict — Heart Disease Prediction App
+# ❤️ CardioPredict — Heart Disease Prediction App
 
 An end-to-end Machine Learning web application that predicts the risk of heart disease based on patient health parameters.
 
