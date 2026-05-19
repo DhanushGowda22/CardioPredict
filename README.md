@@ -172,4 +172,4 @@ CardioPredict/
 
 ## Support
 
-If you like this project, consider giving it a  on GitHub!
+If you like this project, consider giving it a ⭐ on GitHub!
